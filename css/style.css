@@ -1,5 +1,5 @@
 body {
-    background-color: #395c7b;
+    background-color: #6398c6;
     /* color: white;
     text-align: center; */
 }
@@ -14,14 +14,16 @@ h1{
     text-align: center;
 }
 
-
 table {
     margin: 150px auto;
     border: 5px solid black;
     border-spacing: 5px;
 }
 
-
 .board{
     margin: auto;
+}
+
+span{
+    display: none;
 }
