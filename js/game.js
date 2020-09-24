@@ -1,6 +1,6 @@
 'use strict';
-var FLAG = '🚩';
-const BOMB = '💣';
+const FLAG = '🚩';
+const MINE = '💣';
 var gBoard;
 
 var gLevelEasy = {
@@ -35,7 +35,7 @@ function buildBoard() {
             board[i][j] = createCell();
         }
     }
-    board[3][2].isMine = true;
+    board[0][2].isMine = true;
     board[1][1].isMine = true;
     for (var i = 0; i < size; i++) {
         for (var j = 0; j < size; j++) {
@@ -55,6 +55,10 @@ function createCell() {
         isMarked: true
 
     };
+    if (cell.isMine) {
+        cell = MINE;
+
+    }
     return cell;
 };
 
@@ -78,7 +82,14 @@ function cellClicked(elCell, i, j) {
     elCellSpan.style.display = 'block';
     console.log(elCell);
     gBoard[i][j].isShown = true;
-    console.log(buildBoard());
+
+    if (gBoard[i][j] === MINE) {
+        alert('you lost!');
+    }
+    // console.log(buildBoard());
 
 }
 
+// function randomMine(){
+//     for(var i=0;i<)
+// }

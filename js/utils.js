@@ -7,7 +7,7 @@ function renderBoard(board) {
         var row = board[i];
         for (var j = 0; j < board[0].length; j++) {
             var cell = row[j];
-            var icon = (cell.isMine) ? BOMB : board[i][j].minesAroundCount;
+            var icon = (cell.isMine) ? MINE : board[i][j].minesAroundCount;
             var cellId = `cell-${i}-${j}`;
             strHTML += `<td id ="${cellId}"class="cell"
              onclick="cellClicked(this,${i},${j})"><span>${icon}</span></td>`;
