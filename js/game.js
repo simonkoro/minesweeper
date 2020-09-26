@@ -94,7 +94,7 @@ function setMinesNegsCount(cellI, cellJ, board) {
 }
 
 function cellClicked(elCell, i, j) {
-    checkGameOver()
+    // checkGameOver()
     gGame.isOn = true;
     var elCellSpan = elCell.querySelector('span');
     var elBtn = document.querySelector('.smiley');
