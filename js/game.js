@@ -160,12 +160,12 @@ function expandShown(board, elCell, i, j) {
 }
 
 
-function checkGameOver() {
-    if (gGame.markedCount === gLevelEasy.MINES) {
-        alert('You Won!!!');
-    }
+// function checkGameOver() {
+//     if (gGame.markedCount === gLevelEasy.MINES) {
+//         alert('You Won!!!');
+//     }
 
-}
+// }
 
 
 // gGame.shownCount === (gBoard.length - gLevelEasy.MINES) &&
