@@ -40,9 +40,12 @@ function initGame(level) {
 }
 
 // console.table(buildBoard());
+// var randomItem = gBoard[Math.floor(Math.random()*gBoard.length)];
+// console.log(randomItem);
 
 function buildBoard(level) {
     // var mines = gLevelEasy.MINES; // =2
+    
     var size = level;
     var board = [];
     for (var i = 0; i < size; i++) {
@@ -53,6 +56,7 @@ function buildBoard(level) {
     }
     board[1][1].isMine = true;
     board[3][3].isMine = true;
+    // randomItem.isMine = true
     for (var i = 0; i < size; i++) {
         for (var j = 0; j < size; j++) {
             if (!board[i][j].isMine) {
